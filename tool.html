@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tool · SMB Agent Tracker</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1><a href="index.html" style="color:#fff;text-decoration:none">🤖 SMB Agent Tracker</a></h1></header><div class="box" id="t"></div>
+<section class="box cta"><h3>Need help setting this up?</h3><p>Evandrion can help you connect and run it.</p><a class="btn" href="mailto:hello@kordaris.com?subject=Setup%20help">Ask Evandrion</a></section>
+<script src="data/tools.js"></script><script>
+const t=TOOLS.find(x=>x.id==new URLSearchParams(location.search).get("id"));const e=document.getElementById("t");
+e.innerHTML=!t?"Tool not found.":`<h2>${t.name}</h2><p><a href="${t.url}" target="_blank" rel="noopener">${t.url}</a></p>
+<p><b>Job:</b> ${t.job}</p><p><b>Who it's for:</b> ${t.who}</p><p><b>Price:</b> ${t.price_tier} · ${t.starting_price} ${t.pricing_verified?"":"<span class='tag warn'>unverified</span>"} (<a href="${t.pricing_source}" target="_blank" rel="noopener">pricing page</a>)</p>
+<p><b>Setup difficulty:</b> ${t.difficulty}</p><p style="font-size:13px;color:#666">Last checked ${t.last_checked}.</p>`;</script></body></html>
